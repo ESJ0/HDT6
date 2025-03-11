@@ -50,4 +50,37 @@ public class PokemonConfi {
             }
         }
     }
+
+    public void addPokemon(String name) {
+        if (!pokedex.containsKey(name)) {
+            System.out.println("404 eror: Pokemon no encontrado.");
+        } else if (userCollection.containsKey(name)) {
+            System.out.println("404 eror: Pokemon ya en la coleccin.");
+        } else {
+            userCollection.put(name, pokedex.get(name));
+            System.out.println(name + " agregado a la coleccion.");
+        }
+    }
+    
+    public void MostrarPokemons(String name) {
+        System.out.println(pokedex.getOrDefault(name, new Pokemon("Desconocido", "N/A","N/A", 0, "N/A", 0, 0, "N/A", 0, "N/A")));
+    }
+    
+    public void mostrarUserPokemonsByType() {
+        userCollection.values().stream()
+            .sorted(Comparator.comparing(messi -> messi.type1))
+            .forEach(messi -> System.out.println("Name: " + messi.name + ", Type1: " + messi.type1));
+    }
+    
+    public void mostrarAllPokemonsByType() {
+        pokedex.values().stream()
+            .sorted(Comparator.comparing(messi -> messi.type1))
+            .forEach(messi -> System.out.println("Name: " + messi.name + ", Type1: " + messi.type1));
+    }
+    
+    public void mostrarPokemonsByAbility(String ability) {
+        pokedex.values().stream()
+            .filter(messi -> messi.abilities.contains(ability))
+            .forEach(System.out::println);
+    }
 }
