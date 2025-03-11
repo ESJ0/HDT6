@@ -62,7 +62,7 @@ public class PokemonConfi {
         }
     }
     
-    public void MostrarPokemons(String name) {
+    public void mostrarPokemons(String name) {
         System.out.println(pokedex.getOrDefault(name, new Pokemon("Desconocido", "N/A","N/A", 0, "N/A", 0, 0, "N/A", 0, "N/A")));
     }
     
