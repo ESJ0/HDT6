@@ -5,7 +5,7 @@ import java.util.*;
 
 public class PokemonConfi {
     private Map<String, Pokemon> pokedex;
-    private Map<String, Pokemon> userCollection = new LinkedHashMap<>();
+    public Map<String, Pokemon> userCollection = new LinkedHashMap<>();
     
     public PokemonConfi(int mapChoice) {
         this.pokedex = Factory.getMap(mapChoice);
