@@ -3,6 +3,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.io.IOException;
 
+/**
+ * Clase JunitsDePC que se encarga de dos de pruebas unitarias de la clase PokemonConfi
+ */
 public class JunitsDePC {
     private PokemonConfi manager;
 

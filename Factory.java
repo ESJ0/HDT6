@@ -1,5 +1,7 @@
 import java.util.*;
-
+/**
+ * Clase Fctory que se encarga de utilizar el patron de diseno Factory
+ */
 public class Factory {
 
     public static Map<String, Pokemon> getMap(int eleccion) {
